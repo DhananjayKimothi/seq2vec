@@ -1,0 +1,17 @@
+﻿  Source.c
+e:\inferringppi\seq2vec_ppi\seq2vec_ppi\source.c(120): warning C4101: 'number': unreferenced local variable
+e:\inferringppi\seq2vec_ppi\seq2vec_ppi\source.c(166): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\inferringppi\seq2vec_ppi\seq2vec_ppi\source.c(184): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+e:\inferringppi\seq2vec_ppi\seq2vec_ppi\source.c(232): warning C4013: 'KmerIndex' undefined; assuming extern returning int
+e:\inferringppi\seq2vec_ppi\seq2vec_ppi\source.c(298): warning C4101: 'Leng': unreferenced local variable
+e:\inferringppi\seq2vec_ppi\seq2vec_ppi\source.c(465): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+e:\inferringppi\seq2vec_ppi\seq2vec_ppi\source.c(494): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+e:\inferringppi\seq2vec_ppi\seq2vec_ppi\source.c(495): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+e:\inferringppi\seq2vec_ppi\seq2vec_ppi\source.c(497): warning C4018: '<': signed/unsigned mismatch
+e:\inferringppi\seq2vec_ppi\seq2vec_ppi\source.c(514): warning C4018: '<': signed/unsigned mismatch
+e:\inferringppi\seq2vec_ppi\seq2vec_ppi\source.c(603): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+e:\inferringppi\seq2vec_ppi\seq2vec_ppi\source.c(604): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+e:\inferringppi\seq2vec_ppi\seq2vec_ppi\source.c(606): warning C4018: '<': signed/unsigned mismatch
+e:\inferringppi\seq2vec_ppi\seq2vec_ppi\source.c(624): warning C4018: '<': signed/unsigned mismatch
+e:\inferringppi\seq2vec_ppi\seq2vec_ppi\source.c(369): warning C4101: 'filename': unreferenced local variable
+  seq2vec_ppi.vcxproj -> E:\inferringPPI\seq2vec_ppi\Debug\seq2vec_ppi.exe

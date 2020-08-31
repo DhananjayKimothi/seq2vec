@@ -1,0 +1,12 @@
+﻿  Source.c
+C:\Users\n9581766\OneDrive - Queensland University of Technology\Desktop\RESEARCH\gitRepos\seq2vec\seq2vec_infer\seq2vec_ppi_infr\Source.c(101,42): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+C:\Users\n9581766\OneDrive - Queensland University of Technology\Desktop\RESEARCH\gitRepos\seq2vec\seq2vec_infer\seq2vec_ppi_infr\Source.c(111,32): warning C4474: 'sprintf' : too many arguments passed for format string
+C:\Users\n9581766\OneDrive - Queensland University of Technology\Desktop\RESEARCH\gitRepos\seq2vec\seq2vec_infer\seq2vec_ppi_infr\Source.c(111,32): message : placeholders and their parameters expect 1 variadic arguments, but 2 were provided
+C:\Users\n9581766\OneDrive - Queensland University of Technology\Desktop\RESEARCH\gitRepos\seq2vec\seq2vec_infer\seq2vec_ppi_infr\Source.c(279,53): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\n9581766\OneDrive - Queensland University of Technology\Desktop\RESEARCH\gitRepos\seq2vec\seq2vec_infer\seq2vec_ppi_infr\Source.c(280,59): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\n9581766\OneDrive - Queensland University of Technology\Desktop\RESEARCH\gitRepos\seq2vec\seq2vec_infer\seq2vec_ppi_infr\Source.c(282,33): warning C4018: '<': signed/unsigned mismatch
+C:\Users\n9581766\OneDrive - Queensland University of Technology\Desktop\RESEARCH\gitRepos\seq2vec\seq2vec_infer\seq2vec_ppi_infr\Source.c(300,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\n9581766\OneDrive - Queensland University of Technology\Desktop\RESEARCH\gitRepos\seq2vec\seq2vec_infer\seq2vec_ppi_infr\Source.c(255,9): warning C4101: 'neu2e': unreferenced local variable
+C:\Users\n9581766\OneDrive - Queensland University of Technology\Desktop\RESEARCH\gitRepos\seq2vec\seq2vec_infer\seq2vec_ppi_infr\Source.c(253,9): warning C4101: 'neu2e_inlier': unreferenced local variable
+C:\Users\n9581766\OneDrive - Queensland University of Technology\Desktop\RESEARCH\gitRepos\seq2vec\seq2vec_infer\seq2vec_ppi_infr\Source.c(254,9): warning C4101: 'neu2e_outlier': unreferenced local variable
+  seq2vec_ppi_infr.vcxproj -> C:\Users\n9581766\OneDrive - Queensland University of Technology\Desktop\RESEARCH\gitRepos\seq2vec\seq2vec_infer\Debug\seq2vec_ppi_infr.exe
