@@ -4,7 +4,7 @@
 ### Step by Step process
 1. Put fasta file in **data**
 2. Run (from **gen_initialization_files_for_c_code folder**)
-	* s2vc.py
+	* s2v_c.py
         * set *variables* : file
     * vocab_text.py
 
