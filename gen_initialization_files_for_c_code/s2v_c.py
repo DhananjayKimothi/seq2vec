@@ -8,10 +8,11 @@ import pickle as pkl
 from MakeVocab1 import BuildVocab
 from DocVecsArray import DocvecsArray
 from numpy import random
+from collections import defaultdict
 
 file = "yeast_seq.fasta"
 input_path = r"../data"
-output_path = r"../data/inpfile"# save folder
+output_path = r"../data/inpfiles"# save folder
 
 class seq_slicing(object):
     def __init__(self, w_s, w_type, n_w):
@@ -78,25 +79,49 @@ class LabeledSentence(TaggedDocument):
 
 
 class LabeledLineSentence(seq_slicing):
+    
     def __init__(self, filename,ids,w_s, w_type, n_w):
         super(LabeledLineSentence, self).__init__(w_s=w_s, w_type=w_type, n_w=n_w)
         self.filename = filename
-        self.SeqDict = SeqIO.to_dict(SeqIO.parse(filename, "fasta"))  # dictonary: keys as fasta ids
+        #self.SeqDict = SeqIO.to_dict(SeqIO.parse(filename, "fasta"))  # dictonary: keys as fasta ids
+        self.fastaDict = defaultdict()
         self.ids = ids
+    
+    def read_fasta_file_as_dict(self):
+        """
+        It reads fasta file as a dictionary with
+        keys as sequence IDs (without '>')
+        and the value as a sequence (excluding "\n" if there is any)
+        """
+        IdsL = []
+        # file_ = os.path.join(path,fileN)
+        # file = open(file_,'r')
+        lines_iter = iter(open(self.filename,'r'))
+        for line in lines_iter:
+            if line[0] == '>':
+                seq = ''
+                id = line.strip().replace('>','')
+                self.fastaDict[id] = ''
+                IdsL.append(id)
+            else:
+                self.fastaDict[id] += line.strip()
 
+   
+    
     def __iter__(self):
+        self.read_fasta_file_as_dict()
         i = 0
         for key in self.ids:
             cls_lbl = key.split('_')
             key = key.split('\n')
             key = key[0]
-            seq_record = self.SeqDict[key]
-            seq = seq_record.seq
-            seq = str(seq)
+            seq = self.fastaDict[key]
+            #seq = seq_record.seq
+            #seq = str(seq)
             kmer_list = self.slices(seq)  # word size
-            tag = seq_record.id
+            #tag = seq_record.id # tag is key
             # yield TaggedDocument(cls_lbl[2], kmer_list,tags=[tag])
-            yield TaggedDocument(kmer_list,tags=[tag])
+            yield TaggedDocument(kmer_list,tags=[key])
             # yield LabeledSentence(kmer_list, tags=['SEQ_%s' % i])
             i = i+1
 
@@ -146,7 +171,7 @@ class Seq2Vec(BuildVocab):
 
 
         x = self.file_no
-        index2word_py = open(output_path + '\index2word' + str(x) + '.pkl', 'w')
+        index2word_py = open(os.path.join(output_path, 'index2word' + str(x) + '.pkl'),'w')
         pkl.dump(self.index2word, index2word_py)
 
         vocab_py = open(output_path + '\\vocab' + str(x) + '.pkl', 'w')  # kmers, paths and codes
@@ -172,6 +197,7 @@ def main(path_no,file_no):
     window_type = 'non_overlap'  # can choose overlap or non overlap
     n_w = '...?'  # used when non overlaping window is selecte
     filepath = os.path.join(input_path,file)
+    print(filepath)
 
 
     IdsL = sequence_ids(filepath)
@@ -187,6 +213,7 @@ if __name__ == '__main__':
     path_no = 0
     for i in range(0,1):
         file_no = i
+        print("here")
         main(path_no,file_no)
 
 
